@@ -1,0 +1,12 @@
+name: Dcosmos
+version: '${project.version}'
+main: scattered_omega.dcosmos.Dcosmos
+api-version: 1.19
+commands:
+  dcosmetics:
+    description: Opens up the gui for dcosmetics aka death cosmetics
+    aliases:
+      - dco
+      - dcosm
+      - dcosmos
+    usage: /<command> username

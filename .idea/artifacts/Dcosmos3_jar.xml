@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Dcosmos3:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Dcosmos3_jar</output-path>
+    <root id="archive" name="Dcosmos3.jar">
+      <element id="module-output" name="Dcosmos3" />
+    </root>
+  </artifact>
+</component>
