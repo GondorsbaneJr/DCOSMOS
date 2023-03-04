@@ -10,3 +10,11 @@ commands:
       - dcosm
       - dcosmos
     usage: /<command> username
+
+    dcosmos:
+        description: Opens up the gui for dcosmetics aka death cosmetics
+        aliases:
+            - dco
+            - dcosm
+            - dcosmos
+        usage: /<command> username
