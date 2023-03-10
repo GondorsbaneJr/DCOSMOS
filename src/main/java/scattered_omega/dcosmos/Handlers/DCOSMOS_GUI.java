@@ -52,11 +52,16 @@ public class DCOSMOS_GUI implements org.bukkit.event.Listener {
             if (event.getCurrentItem().getType().equals(org.bukkit.Material.DIAMOND_SWORD)) {
                 player.sendMessage("§c[§aDCometicsS§c] §2You have enabled the §a§lSomone got Domed Death Message");
                 player.getInventory().setItem(0, new org.bukkit.inventory.ItemStack(org.bukkit.Material.DIAMOND_SWORD));
+            }else{
+                player.sendMessage("§c[§aDCometicsS§c] §4Lmao you don't have the perms to use this death message ask the owner on how to get acces to this death message");
             }
-            if (event.getCurrentItem().getType().equals(org.bukkit.Material.NETHERITE_SWORD)) {
-                player.sendMessage("§c[§aDCometicsS§c] §2You have enabled the §a§lPremium Death Message");
-                player.getInventory().setItem(1, new org.bukkit.inventory.ItemStack(org.bukkit.Material.NETHERITE_SWORD));
-            }
+            if (player.hasPermission("dcosmos.premium"))
+                if (event.getCurrentItem().getType().equals(org.bukkit.Material.NETHERITE_SWORD)) {
+                    player.sendMessage("§c[§aDCometicsS§c] §2You have enabled the §a§lPremium Death Message");
+                    player.getInventory().setItem(1, new org.bukkit.inventory.ItemStack(org.bukkit.Material.NETHERITE_SWORD));
+            }else{
+                player.sendMessage("§c[§aDCometicsS§c] §4Lmao you don't have the perms to this premium death message ask the owner on how to get acces to this premium death message");
+                }
         }
     }
 
@@ -72,7 +77,7 @@ public class DCOSMOS_GUI implements org.bukkit.event.Listener {
             event.setDeathMessage("§c[§aDCometicsS§c] §2" + player.getName() + " §4was killed by §2" + Objects.requireNonNull(player.getKiller()).getName());
 
         }
-        if (player.hasPermission("dcosmetics.use.premium") && Objects.equals(player.getInventory().getItem(1), new org.bukkit.inventory.ItemStack(org.bukkit.Material.NETHERITE_SWORD))
+        if (player.hasPermission("dcosmetics.premium") && Objects.equals(player.getInventory().getItem(1), new org.bukkit.inventory.ItemStack(org.bukkit.Material.NETHERITE_SWORD))
         ) {
             event.setDeathMessage("§c[§aDCometicsS§c] §2" + player.getName() + " §4was DOMED by. Skill issue tbh §2" + player.getKiller().getName());
         } else {
